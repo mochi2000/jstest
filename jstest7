@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script>
+
+      
+      function calc(){
+        let y = document.getElementById("year").value
+        let a = "";
+        let b = "";
+
+        switch(y % 12) {
+          case 0:
+          a = "申";break;
+          case 1:
+          a = "酉";break;
+          case 2:
+          a = "戌";break;
+          case 3:
+          a = "亥";break;
+          case 4:
+          a = "子";break;
+          case 5:
+          a = "丑";break;
+          case 6:
+          a = "寅";break;
+          case 7:
+          a = "卯";break;
+          case 8:
+          a = "辰";break;
+          case 9:
+          a = "巳";break;
+          case 10:
+          a = "午";break;
+          case 11:
+          a = "未";break;
+        }
+
+        switch(y % 10) {
+          case 0:
+          b = "庚";break;
+          case 1:
+          b = "辛";break;
+          case 2:
+          b = "壬";break;
+          case 3:
+          b = "癸";break;
+          case 4:
+          b = "甲";break;
+          case 5:
+          b = "乙";break;
+          case 6:
+          b = "丙";break;
+          case 7:
+          b = "丁";break;
+          case 8:
+          b = "戊";break;
+          case 9:
+          b = "己";break;
+        }
+
+        document.getElementById("e").textContent = (a + b);
+        document.getElementById("y").textContent = y;
+      }
+    </script>
+  </head>
+  <body>
+    <h2><span id="y"></span>年の干支は<span id="e"></span></h2>
+    <p>
+      <input id="year" value="2016"/>
+      <button onclick="calc()">計算</button>
+    </p>
+  </body>
+</html>
